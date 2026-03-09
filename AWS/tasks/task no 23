@@ -4,3 +4,7 @@ move old data present in S3 old bucket to new bucket
 aws s3api create-bucket --bucket <name-of-bucket>
 
 aws s3 sync s3://<old-bucket-name> s3://<new-bucket-name>
+
+verfiy if data is copied or not by
+
+aws s3 ls s3://<old-bucket-name> --recursive | wc -l
