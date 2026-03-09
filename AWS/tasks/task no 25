@@ -1,0 +1,6 @@
+Setting up an EC2 instance and CloudWatch Alarm
+
+first create EC2 instance and then copy its Instance-id
+go to cloudwatch -select the In Alarms - select metrics - choose InstanceId:copy the Instance-id here
+select the CPU utilization parameter
+add the specific requirements given then create it.
