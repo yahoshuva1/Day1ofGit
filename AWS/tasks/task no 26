@@ -1,0 +1,10 @@
+Create a Nginx Webserver in a EC2 machine
+
+create  ec2 with ubuntu ami image
+allow 80 port for internet traffic in security group rules
+now at user-data section add the nginx webserver script to start and enable the webserver
+sudo apt-get update -y
+sudo apt-get install nginx -y
+sudo systemctl start nginx
+sudo systemctl enable nginx
+test by login into ec2 server and check systemctl status nginx
