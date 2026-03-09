@@ -1,0 +1,8 @@
+Create a Application Load Balancer for EC2 Instance:
+
+Create a loadbalacer
+Create a targetgroup
+Create a security group allow http with port 80
+attach to the ec2 instance
+
+make sure to get good understanding on how to create those why those are needed. Here
