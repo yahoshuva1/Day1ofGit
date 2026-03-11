@@ -1,0 +1,80 @@
+What is a Filesystem?
+It is a system used by an operating system to manage files.
+The system controls how data is saved or retrieved.
+eg: ext3,ext4,xfs - linux filesystems
+    NTFS,FAT - windows filesystems
+
+File system structure and its description
+/boot - contains file that is used by the boot loader(grub.cfg)
+/root - root user home directory. It is not same as /
+/dev  - system devices (e.g disk,cdrom,speakers,fashdrive,keyboard etc.)
+/etc  - Configuration files applications runs on top of linux system 
+        all those config files located here.
+        make a backup before you modify any file.
+/bin -> /usr/bin - Everyday user commands
+/sbin -> /usr/sbin - System/filesystem commands
+/opt -> Optional add-on applications (Not part of OS apps) 
+        third party applications(oracle,mysql etc..)
+/proc -> Running processes (Only exist in Memory)
+/lib -> usr/lib - C programming library files needed by commands and apps
+                  commands that we run like(pwd,ls,cat etc..)
+                  strace -e open pwd
+/tmp - Directory for temporary files.
+/home - Directory for user
+/var  = System logs (os writes some o/p app logs goes into this 
+troubleshooting can we seen here
+/run  - system daemons that start very early(eg: systemd and udev) to stroe temporary runtime files like PID files
+/mnt - To mount external filesystem (eg.NFS)
+/media - For cdrom mounts.
+
+check in linux system.
+
+Navigating File System:
+-----------------------
+important commands.
+cd - change directory
+pwd - print working directory
+ls - list the directories & files.
+
+Linux File or Directory Properties:
+-----------------------------------
+each file or directory in linux has detail information or properties.
+ls -l 
+Type       of links  Owner  Group Size  Month Day Time Name
+
+drwxr-xr-x  21        root   root  4096  mar  11  14:03 var
+
+lrwxrwxrwx  1         root   root  7   mar     11  14:04 testfile.txt
+
+second column: 2nd hard links of file. subdirectories
+third : who owns this file
+4th : which group owns it
+5th : size of file/directory
+6th : day
+7th : time
+8th : name of file/directory
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
