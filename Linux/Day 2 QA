@@ -1,0 +1,7 @@
+Soft Links and Hard Links
+-------------------------
+Soft link -ln -s if source file is removed or deleted destination file to deleted
+as softlink points to file which is created and the file is attached to inode number.
+Hardlink -ln  if source file is removed,renamed and deleted still destination file is available.
+as hardlink points to inode number
+
