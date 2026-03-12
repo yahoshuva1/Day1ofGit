@@ -1,0 +1,123 @@
+User and Account Creation - Shell Scripting Project 1
+
+Your first script:
+------------------
+Creates new accounts
+Checks for proper privileges.
+Reports if account creation failed.
+
+Getting Started with Shell Scripting: Naming,Permissions,Variables,Builtins.
+#!/bin/bash
+shebang line
+what is the going to execute in the file
+# - comments not executed
+# This script displays various info to the screen.
+# Display "hello"
+echo "Hello" 
+sh file.sh
+-rw-r--r-- 
+r -read
+w -write
+x -execute
+
+rwx - owner
+rwx - group
+rwx - user 
+
+add permissions the execute the file chmod 755 file.sh
+-rw-r--r--
+-rwxr-xr-x here for owner full permissions for group,user read,execute
+4 2 1    755
+read 4 
+write 2
+execute 1
+
+execute the script ./file.sh
+type is used to display the details of command and
+type -a <command> shows where it is located.
+/usr/bin/echo
+shell builtin is portable
+help echo gives lot of options.
+uptime  type -a uptime
+uptime is /usr/bin/uptime
+man uptime
+
+variables can be numbers,words wordnumber mixed.
+WORD1,_WORD,3WORD,A-WORD X
+WORD='script'
+
+display the value using the variable
+echo "$WORD"
+if i put only single quote for echo '$WORD'
+it displays $WORD as output
+combine the variable with hard-coded text.
+echo "This is a shell $WORD"
+alternative syntax to display the contents of variable.
+
+echo "this is shell ${WORD}"
+append text to the variable
+echo "${WORD}ing is fun!"
+create a new variable
+ENDING='ed'
+combine the two variables
+echo "This is ${WORD}${ENDING}."
+
+Special Variables,Pseudocode,Command Substitution,if Statement,Conditionals.
+
+Display the UID and username of the user executing this script.
+Display if the user is the root user or not.
+
+Display the UID
+Display the username
+Display if the user is the root user or not.
+UID comes from bash this variable is readonly.
+echo "the uid is ${UID}"
+USER_NAME=$(id -un)
+`id -un` (backtick symbol can also be used)
+echo "Your username is ${USERNAME}"
+
+if [[ "${UID}" -eq 0 ]]
+then 
+     echo "you're root."
+else 
+     echo "you're not root."
+fi
+
+-----------------
+Exit Statuses,Return Codes, String Test Conditionals, More Special Variables.
+Display the UID and username of the user executing this script
+Display if the user is ec2-user or not.
+
+Display the UID
+Only display if the UID does NOT match 1000
+Display the username
+Test if the command succeeded.
+You can use a string test conditional.
+Test for !=(not equal) for the string.
+
+if [[ "${UID} !eq 1000 ]] you need to use -ne and keep UID_TO_TEST_FOR variable as  1000 value 
+then 
+    echo "${UID}"
+
+exit 1 so, it does not execute returns 1
+man exit status values check this
+man useradd
+
+USER_NAME=$(id -un)
+if [[ "${?}} -ne 0 ]]
+then 
+    echo 'The id command did not execute succefully.'
+    exit 1
+fi
+echo "your username is ${USER_NAME}"
+-----------------
+Reading Standard Input,Creating Accounts, Username Conventions, More Quoting.
+
+
+
+
+
+
+
+
+
