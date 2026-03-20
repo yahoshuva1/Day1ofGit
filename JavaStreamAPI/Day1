@@ -1,3 +1,8 @@
 Write a Java program to move the zeros of given list to end using java 8 stream api 
 eg: (1,0,-3,0,5,-2,0,8,0,-4)
+WAP to find the duplicates of the given list 
+eg: (1,2,3,4,5,2,4,9)
+WAP to find the count of occurances of the given list check above.
+WAP if you give 7 it will return 11 if you give 11 it should give 7 don't use if-else, else-if conditions.
+WAP to sort the map basing on value using java 8.
 
