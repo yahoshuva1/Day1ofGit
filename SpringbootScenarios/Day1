@@ -1,3 +1,6 @@
+CodeNova -youtube channel:
+============================
+
 You are working on a Spring Boot application and need to load different configurations for dev
 and prod envs. how do you achieve this?
 application.properties or application.yaml
@@ -181,6 +184,86 @@ return userrepository.findAll(pageable);
 }
 Query:
 SELECT * FROM users LIMIT pageSize OFFSET (pageNumber*pageSize);
+
+
+-- You have an API but it takes too long to respond.
+how would you debug it?
+
+-- check if the api is really slow or not. use postman or curl
+and measure the response time.
+
+if it is only slow in the browser it might be a frontend issue.
+if it is slow in browser then it might be backend.
+
+step 2:
+check the latency. latency means the time taken to reach the server.
+we can use curl command to check latency.
+
+curl -o /dev/null -s -w "Total: %[time_total]s\n" https://google.com
+total: 0.551007s
+
+step 3:
+check the server processing logic and time taken at each layer.
+
+we can place loggers at Service layer and Database layer to check the 
+time taken by the code.
+
+@GetMapping("/users")
+public List<User> getUsers(){
+long start = System.currentTimeMillis();
+List<User> users = userService.getUsers();
+long end = System.currentTimeMillis();
+
+log.info("Server processing took {} ms", (end-start) );
+return users;
+
+}
+long dbStart = System.currentTimeMillis();
+
+List<User> users = userRepository.findAll();
+long dbEnd = System.currentTimeMillis();
+
+log.info("Database call took {} ms" , (dbEnd - dbStart));
+
+we can also use Application Performance Management(APM) tools like 
+new Relic for more detailed breakdown.
+
+-- what is the diff b/w a Filter and an Interceptor, when should
+you use each?
+
+filters and interceptors both of them allow the requests before and
+after they reach controllers.
+But they work at diff levels 
+
+filter operates at servlet level before the request enters into
+springframework
+-it intercepts the request before they reach dispatcher servlet.
+- Interceptor operates at spring level that after request maps to a controller.
+it works after dispatcherServlet and before the controller.
+here we can use spring beans.
+
+Suppose you have 1 million records.like amazon which handles a massive
+no.of products
+how would you handle pagination?
+
+
+Why NOT Offset pagination?
+Offset pagination works by skipping a certain number of rows
+
+SELECT * FROM products ORDER BY id LIMIT 10 OFFSET 1000;
+
+Why Keyset pagination?
+--Keyset pagination retrieves records based on a specific key(usually a unique,indexed column like
+id or timestamp). This makes it faster, especially for large datasets.
+
+First API call:
+/products?key=O&pageSize=10
+
+SELECT * from products WHERE id > 0 ORDER BY id LIMIT 10
+
+it returns first 10 records
+
+amazon applies infinite pagescrolling.
 
 
 
