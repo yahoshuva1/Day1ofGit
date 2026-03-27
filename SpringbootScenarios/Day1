@@ -1,1 +1,198 @@
+You are working on a Spring Boot application and need to load different configurations for dev
+and prod envs. how do you achieve this?
+application.properties or application.yaml
+
+you have a service class that needs to be injected into multiple controllers. What are the
+different ways to achieve this in Spring Boot?
+- @Dependency injection(Constructor,Setter injection).
+
+
+You have a REST API, and when an invalid ID is provided, it should return a custom error 
+message with a 404 Not found status. How do you handle this?
+- using @GlobalException handling
+@ControllerAdvice and @ExceptionHandler
+
+You need to log events in your app instead of using sop(). how do you do it?
+- using slf4j,log4j
+you need to manually create and manage a springbean how do you do it?
+- @Bean
+
+you are performing multiple database operations, and you want all of them to succeed or 
+none at all (rollback on failure). How do you handle this?
+- Using @Transactional annotation.
+
+
+You need to run a job every 5 minutes (eg,sending email notifications). How do you 
+schedule it?
+
+your app needs to fetch weather data from an external api(eg: openweather). How do you
+make HTTP requests?
+
+-using RestTemplate
+
+your api returns json responses, but you need to hide some fields(like passwords) while
+exposing others. How do you do it?
+- using DTO's
+
+You need to impl an api that allows users to upload large files. how do you handle it?
+- using MultimediaType
+
+your app fetches data from a slow db. how do you cache results to improve performance?
+- using redis
+
+lets say you have two beans impl the same interface called Notificationservice, one is 
+EmailNotificationService, the other is SMSNotificationService.
+application.properties file contains a property called "apps.sms.enabled".
+which annotation you will use and how?
+
+- use of @ConditionalOnProperty
+
+app.properties
+
+app.sms.enabled=true
+
+@Service
+@ConditionalOnProperty(name="app.sms.enabled", havingValue="true")
+public class SMSNotificationService implements NotificationService {
+
+
+@Override
+public String sendNotification(String message){
+return "Sent via SMS: " + message)
+
+}
+
+@Service
+@ConditionalOnProperty(name="app.sms.enabled", havingValue="true")
+public class SMSNotificationService implements NotificationService {
+
+
+@Override
+public String sendNotification(String message){
+return "Sent via SMS: " + message)
+
+}
+
+if it has true then go with this
+
+in controller
+
+@RestController
+@RequestMapping("/notify")
+public class NotificationController{
+
+NotificationService notificationService;
+
+@Autowired
+public NotificationService(NotificationService notificationservice){
+this.notificationService=notificationService;
+}
+
+@GetMapping
+public String sendNotification(@RequestParam String message){
+return notificationService.sendNotification(message);
+}
+
+sendNotification is the interface method
+
+so, it will run via sms
+
+--
+same question diff scenario
+
+what if i have two properties to check to create a bean?
+
+app.sms.enabled=true
+app.environment=prod
+then create SMSNotificationService
+
+we need to know the annotations first
+@ConditionalOnExpression:
+
+It tells the Spring to Create the bean only if this expression true.
+you can even use multiple properties and do logical checks.
+
+
+@ConditionalOnExpression("'${app.sms.enabled}'=='true' and '${app.env}'=='prod'")
+public class SMSNotificationService{...}
+
+-- this is called spring expression language.
+
+--you're building a springboot rest api for user registration
+the client sends this json request
+
+{
+"id":null,
+"username":"",
+"email":"",
+"age":
+}
+you want to apply the below rules
+id:cannot be null
+username:should be between 3 and 15 characters
+email: valid email format
+age: should be at least 18
+
+questions is which validation annotations would you apply to each
+field in your DTO to achieve this? list them down.
+
+--- so, 
+
+@NotNull(message="Id cannot be null")
+@Id
+@GeneratedValue(stragey=GenerationType.AUTO)
+private Long id;
+@NotEmpty(message: "username is required")
+@Size(min=3,max=15, message="username must be min of 3 and max of 4 characters")
+private String username;
+@Email(message="Email should be valid")
+@NotEmpty(message="Email is required")
+@(pattern="a-z..")
+private String email;
+@Min(value=18,message="Age should be minimum of 18 required")
+private int age;
+
+-- at controller we need to use @Valid annotation
+-- don't forget to add spring-boot-strater-validation to your dependency folder
+
+you are implementing an API that returns users to the client.
+But the dataabase has 1 lakh users.
+
+how will you return data to the client efficiently?
+-- commanly used is Pagination
+
+pageno which page,
+pagesize no.of records
+
+Use JpaRepository, it extends PagingAndSortingRepository
+
+public interface UserRepository extends JpaRepository<User,Long>{}
+
+Controller class:
+
+@GetMapping("/users")
+public Page<User> getUsers(
+@RequestParam(defaultValue="0") int pageNumber,
+@RequestParam(defaultValue="10") int pageSize) {
+
+Pageable pageable = PageRequest.of(pageNumber,pageSize);
+return userrepository.findAll(pageable);
+
+}
+Query:
+SELECT * FROM users LIMIT pageSize OFFSET (pageNumber*pageSize);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
