@@ -11,3 +11,40 @@ Deployed RabbitMQ on Kubernetes as a StatefulSet (stable identity + persistent s
 Supported Operational Monitoring by checking pod health, logs and messaging backlog, helping identify consumer lag and processing issues.
 
 
+
+YAHOSHUVA PASUPULETI
+Senior Software Engineer | Java | Spring Boot | Microservices | AWS | DevOps
+pyahoshuva4@gmail.com | +91-9951104219 | Hyderabad, India | LinkedIn: https://www.linkedin.com/in/yahoshuva-pasupuleti-3475b41b2/
+PROFESSIONAL SUMMARY
+Senior Software Engineer with 4+ years of experience designing, developing, and deploying enterprise-grade Java and Spring Boot applications using microservices architecture. Proven expertise in building scalable RESTful APIs, implementing CI/CD pipelines with Jenkins, containerizing applications with Docker and Kubernetes, and provisioning AWS cloud Holds active certifications in Java SE 11, AWS Solutions Architect – Associate, and Certified Kubernetes Administrator (CKA).
+TECHNICAL SKILLS
+Languages	Java (SE 11), SQL
+Frameworks	Spring Boot, Spring MVC, Spring Data JPA, Hibernate, Spring Security
+Databases	MySQL, PostgreSQL, Spring Data JPA Repositories
+DevOps & CI/CD	Jenkins, Git, GitHub, Docker, Kubernetes
+ Cloud 	AWS (EC2, VPC, RDS, IAM, S3, EBS, EFS, Auto Scaling, CloudWatch) Build Tools	Maven
+      PROFESSIONAL EXPERIENCE
+Senior Software Engineer | LTIMindtree – ABSA Online Sales Fulfillment	Feb 2023 – Present
+•	Developed RESTful APIs using Spring Boot with layered architecture (Controller/Service/Repository) to implement business workflows and validations.
+•	Integrated Spring Data JPA/Hibernate for database operations custom queries and mapping entity relationships.
+•	Implemented DTO-based API contracts to separated external request/response models from persistence entities and improve maintainability.
+•	Added global exception handling using @ControllerAdvice to return consistent error responses and reduce controller-level.
+•	Integrated third-party credit bureau API via Spring RestTemplate with error handling and retry logic, reducing processing latency and improving response consistency for real-time credit score retrieval.
+•	Built a producer-consumer flow using Spring Boot + RabbitMQ (Spring AMQP) to enable asynchronous communication and decouple microservices.
+•	Implemented consumer processing using listener-based consumption, ensuring reliable processing with acknowledgments and proper error handling during message failures.
+•	Deployed services on AWS EKS and worked with Kubernetes objects such as Deployments, Services, ConfigMaps and Secrets for environment-based configuration.
+•	Deployed RabbitMQ on Kubernetes as a StatefulSet (stable identity + persistent storage) and validated pod restarts/queue persistence using PV/PVC behavior.
+•	Supported Operational Monitoring by checking pod health, logs and messaging backlog, helping identify consumer lag and processing issues.
+Software Engineer | LTIMindtree – ABSA Internet Banking	Aug 2022 – Feb 2023
+•	Developed the 'Payment Made By' backend feature using Java and Spring Boot, implementing business logic for payment attribution and improving transactional accuracy within the internet banking platform.
+•	Diagnosed and resolved production incidents using ServiceNow
+•	CERTIFICATIONS
+•	Oracle Certified Professional: Java SE 11 Developer
+•	AWS Certified Solutions Architect – Associate
+•	Certified Kubernetes Administrator (CKA)
+EDUCATION
+Bachelor of Technology – Computer Science	Oct 2020
+SRK Institute of Technology | GPA: 71%
+
+
+
