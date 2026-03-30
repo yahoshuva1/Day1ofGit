@@ -10,6 +10,8 @@ Deployed services on AWS EKS and worked with Kubernetes objects such as Deployme
 Deployed RabbitMQ on Kubernetes as a StatefulSet (stable identity + persistent storage) and validated pod restarts/queue persistence using PV/PVC behavior.
 Supported Operational Monitoring by checking pod health, logs and messaging backlog, helping identify consumer lag and processing issues.
 
+Used Vault to store and manage database usernames/passwords, API secrets, and service credentials.
+
 
 
 YAHOSHUVA PASUPULETI
@@ -47,4 +49,40 @@ Bachelor of Technology – Computer Science	Oct 2020
 SRK Institute of Technology | GPA: 71%
 
 
+Java: Core Java, Java SE 11, OOPS, Collections, Streams, Exception Handling
+Spring: Spring Boot, Spring MVC, Spring Data JPA, Spring Security
+Persistence: Hibernate, JPA Repositories, JPQL, Native Queries
+Architecture: Microservices, DTO Pattern, Layered Architecture
+Messaging: RabbitMQ (Spring AMQP)
+APIs: RESTful APIs, Third‑party API Integration
+Databases: MySQL, PostgreSQL
+Build Tool: Maven
+
+CI/CD: Jenkins, Git, GitHub
+Containers: Docker
+Orchestration: Kubernetes (EKS, Deployments, Services, StatefulSets, ConfigMaps, Secrets)
+Cloud: AWS (EKS, EC2, VPC, RDS, IAM, S3, EBS, EFS, CloudWatch)
+Messaging Infra: RabbitMQ on Kubernetes
+Monitoring: Pod health, logs, queue backlogs
+Build: Maven
+
+
+Designed and developed RESTful microservices using Spring Boot following layered architecture (Controller, Service, Repository).
+Implemented Spring Data JPA & Hibernate for database persistence, custom queries, and entity relationship mapping.
+Designed DTO-based API contracts to decouple external request/response models from database entities, improving maintainability and API stability.
+Implemented global exception handling using @ControllerAdvice to standardize error responses and reduce controller-level code duplication.
+Integrated third-party credit bureau APIs using Spring RestTemplate with proper error handling and retry mechanisms to support real-time credit score validation.
+Built asynchronous producer–consumer architecture using Spring Boot + RabbitMQ (Spring AMQP) to decouple services and improve system scalability.
+Implemented listener-based message consumption with acknowledgments and error handling to ensure reliable message processing.
+Containerized applications using Docker and deployed microservices on AWS EKS.
+Deployed RabbitMQ as a Kubernetes StatefulSet, ensuring stable network identity and persistent storage using PV/PVC.
+Configured Kubernetes resources such as Deployments, Services, ConfigMaps, and Secrets for environment-specific configuration.
+Used Vault to store and manage database usernames/passwords, API secrets, and service credentials.
+Supported production monitoring by analyzing pod health, application logs, and message queue backlogs, helping identify consumer lag and processing issues.
+Collaborated with team members using GitHub for centralized code management and reviews.
+Automated Maven build, test, and packaging stages within Jenkins pipelines
+Built CI/CD pipelines with Jenkins using Maven for build automation
+
+Diagnosed and resolved production incidents using ServiceNow, collaborating with support and infrastructure teams to ensure system stability.
+Ensured adherence to banking compliance, logging, and audit requirements.
 
