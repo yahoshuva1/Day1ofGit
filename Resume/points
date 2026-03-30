@@ -88,6 +88,44 @@ Collaborated with team members using GitHub for centralized code management and 
 Automated Maven build, test, and packaging stages within Jenkins pipelines
 Built CI/CD pipelines with Jenkins using Maven for build automation
 
+Updated static images/content to reflect new features.
 Diagnosed and resolved production incidents using ServiceNow, collaborating with support and infrastructure teams to ensure system stability.
 Ensured adherence to banking compliance, logging, and audit requirements.
 
+
+
+YAHOSHUVA PASUPULETI
+Senior Software Engineer  |  Java  |  Spring Boot  |  Microservices  |  AWS  |  DevOps
+pyahoshuva@gmail.com  |  +91-9951104219  |  Hyderabad, India  |  linkedin.com/in/yahoshuva-pasupuleti-3475b41b2
+PROFESSIONAL SUMMARY
+Senior Software Engineer with 4+ years of experience designing, developing, and deploying enterprise-grade Java and Spring Boot applications using microservices architecture. Skilled in building scalable REST APIs, asynchronous messaging with RabbitMQ, and deploying cloud-native applications on AWS EKS with Docker and Kubernetes. Experienced in banking and financial domains with a focus on stability, performance, and maintainability. Holds Oracle Java SE 11, AWS Solutions Architect Associate, and CKA certifications.
+TECHNICAL SKILLS
+
+Languages & Frameworks: Java 8,11, Spring Boot, Spring MVC, Spring Data JPA, Spring Security
+Databases & Persistence: MySQL, PostgreSQL, Hibernate, JPA Repositories, JPQL, Native Queries
+Messaging: RabbitMQ (Spring AMQP), Asynchronous Producer-Consumer, Listener-based Consumption
+Cloud & Infrastructure: AWS (EKS, EC2, VPC, RDS, IAM, S3, EBS, EFS, CloudWatch), Docker, Kubernetes (Deployments, StatefulSets, ConfigMaps, Secrets)
+CI/CD & DevOps: Jenkins, Maven, Git, GitHub, HashiCorp Vault
+Architecture & APIs: Microservices, RESTful APIs, DTO Pattern, Layered Architecture, Third-party API Integration
+PROFESSIONAL EXPERIENCE
+Senior Software Engineer  |  LTIMindtree – ABSA Online Sales Fulfillment  Feb 2023 – Present 
+•	Designed and developed RESTful microservices using Spring Boot with layered architecture (Controller, Service, Repository).
+•	Implemented Spring Data JPA and Hibernate for database persistence, custom queries, and entity relationship mapping.
+•	Designed DTO-based API contracts to decouple request/response models from database entities, improving API stability and maintainability.
+•	Implemented global exception handling via @ControllerAdvice to standardize error responses and reduce controller-level code duplication.
+•	Integrated third-party credit bureau APIs using Spring RestTemplate with error handling and retry mechanisms for real-time credit score validation.
+•	Built asynchronous producer-consumer architecture using RabbitMQ (Spring AMQP) with listener-based consumption, acknowledgments, and error handling.
+•	Containerized microservices with Docker and deployed on AWS EKS; deployed RabbitMQ as a Kubernetes StatefulSet with PV/PVC persistent storage.
+•	Configured Kubernetes Deployments, Services, ConfigMaps, and Secrets for environment-specific configuration management.
+•	Managed secrets (database credentials, API keys, service tokens) securely using HashiCorp Vault.
+•	Monitored production systems by analyzing pod health, application logs, and message queue backlogs to identify and resolve consumer lag.
+•	Built CI/CD pipelines using Jenkins and Maven for automated build, test, and packaging; managed code reviews via GitHub.
+Software Engineer  |  LTIMindtree – ABSA Internet Banking  Aug 2022 – Feb 2023
+•	Updated static content and images to reflect new internet banking portal features.
+•	Diagnosed and resolved production incidents using ServiceNow in collaboration with cross-functional support teams.
+•	Ensured adherence to banking compliance standards, audit logging, and regulatory requirements.
+
+CERTIFICATIONS
+Oracle Certified Professional: Java SE 11 Developer  |  AWS Certified Solutions Architect – Associate  |  Certified Kubernetes Administrator (CKA)
+EDUCATION
+Bachelor of Technology – Computer Science  |  SRK Institute of Technology  |  GPA: 71%  |  Oct 2020
