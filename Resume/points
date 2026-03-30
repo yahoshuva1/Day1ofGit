@@ -1,0 +1,13 @@
+Developed RESTful APIs using Spring Boot with layered architecture (Controller/Service/Repository) to implement business workflows and validations.
+Implemented core business logic using core java, applying OOP principles, exception handling and collection of clean and maintainable code.
+Integrated Spring Data JPA/Hibernate for database operations, implementing CRUD+ custom queries and mapping entity relationships.
+Implemented DTO-based API contracts to separated external request/response models from persistence entities and improve maintainability.
+Added global exception handling using @ControllerAdvice to return consistent error responses and reduce controller-level.
+Integrated third-party credit bureau API via Spring RestTemplate with error handling and retry logic, reducing processing latency and improving response consistency for real-time credit score retrieval.
+Built a producer-consumer flow using Spring Boot + RabbitMQ (Spring AMQP) to enable asynchronous communication and decouple microservices.
+Implemented consumer processing using listener-based consumption, ensuring reliable processing with acknowledgments and proper error handling during message failures.
+Deployed services on AWS EKS and worked with Kubernetes objects such as Deployments, Services, ConfigMaps and Secrets for environment-based configuration.
+Deployed RabbitMQ on Kubernetes as a StatefulSet (stable identity + persistent storage) and validated pod restarts/queue persistence using PV/PVC behavior.
+Supported Operational Monitoring by checking pod health, logs and messaging backlog, helping identify consumer lag and processing issues.
+
+
