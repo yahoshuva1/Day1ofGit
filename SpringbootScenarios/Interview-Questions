@@ -1,0 +1,11 @@
+how would you handle inter-service communication between microservices architecture in springboot?
+RestTemplate- simple and direct communication.
+FeignClient- for multiple services.
+RabbitMQ - Async-synchronous communication.
+
+How would you implement caching in your springboot application?
+@EnableCaching - for main class
+@Cachebale- for method to get results
+@CachePut- update of records
+@CacheEvict - Delete methods ki
+
